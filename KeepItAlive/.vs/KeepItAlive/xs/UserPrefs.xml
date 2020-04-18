@@ -1,0 +1,32 @@
+﻿<Properties StartupConfiguration="{D21A7A22-0B50-0E8C-FA3E-9AE1920C1642}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Script/InventoryAnim.cs">
+    <Files>
+      <File FileName="Assets/Script/RaycastClick.cs" Line="25" Column="10" />
+      <File FileName="Assets/Script/Positioning.cs" Line="73" Column="39" />
+      <File FileName="Assets/Script/Selected.cs" Line="8" Column="28" />
+      <File FileName="Assets/Script/PutDown.cs" Line="22" Column="91" />
+      <File FileName="Assets/Script/Inventory.cs" Line="11" Column="24" />
+      <File FileName="Assets/Script/InventoryAnim.cs" Line="8" Column="8" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="KeepItAlive" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Script" expanded="True">
+                <Node name="InventoryAnim.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="ae1c4243-bf1a-4c25-b3f4-7e66f8368e1c" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
