@@ -126,6 +126,7 @@ GameObject:
   - component: {fileID: 6031867778595665589}
   - component: {fileID: 6031867778596992661}
   - component: {fileID: 6031867778597958741}
+  - component: {fileID: 486541944}
   m_Layer: 0
   m_Name: BackPanel
   m_TagString: Untagged
@@ -192,6 +193,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &486541944
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6031867778595957397}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.4793599, y: 0.09469604, z: 1.0672898}
+  m_Center: {x: -0.0072529907, y: 1.8554229, z: -0.76933396}
 --- !u!1 &6031867778595957405
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,6 +217,7 @@ GameObject:
   - component: {fileID: 6031867778595665597}
   - component: {fileID: 6031867778596992659}
   - component: {fileID: 6031867778597958739}
+  - component: {fileID: 1757768433}
   m_Layer: 0
   m_Name: Screen
   m_TagString: Untagged
@@ -269,3 +284,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &1757768433
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6031867778595957405}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.4793609, y: 0.076938026, z: 1.0039428}
+  m_Center: {x: -0.0015185176, y: -1.591579, z: 0.69627947}
