@@ -16,6 +16,8 @@ public class Inventory : MonoBehaviour
     public bool yourCard = false;
     public bool USB = true;
 
+    
+
     public GameObject btn_batteryOne;
     public GameObject btn_batteryTwo;
     public GameObject btn_salvagedScreen;
@@ -28,72 +30,73 @@ public class Inventory : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        btn_batteryOne.active = false;
-        btn_batteryTwo.active = false;
-        btn_extraWires.active = false;
-        btn_originalScreen.active = false;
-        btn_salvagedScreen.active = false;
-        btn_yourCard.active = false;
-        btn_USB.active = true;
+        btn_batteryOne.SetActive(false);
+        btn_batteryTwo.SetActive(false);
+        btn_extraWires.SetActive(false);
+        btn_originalScreen.SetActive(false);
+        btn_salvagedScreen.SetActive(false);
+        btn_yourCard.SetActive(false);
+        btn_USB.SetActive(true);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (batteryOne == true)
-        {
-            btn_batteryOne.active = true;
+        if (batteryOne == true && batteryTwo == false|| batteryTwo == true && batteryOne == false)
+        { 
+            btn_batteryOne.SetActive(true);
         } else
         {
-            btn_batteryOne.active = false;
+            btn_batteryOne.SetActive(false);
         }
-        if (batteryTwo == true)
+        if (batteryTwo == true && batteryOne == true)
         {
-            btn_batteryTwo.active = true;
+            btn_batteryTwo.SetActive(true);
         }
         else
         {
-            btn_batteryTwo.active = false;
+            btn_batteryTwo.SetActive(false);
         }
         if (extraWires == true)
         {
-            btn_extraWires.active = true;
+            btn_extraWires.SetActive(true);
         }
         else
         {
-            btn_extraWires.active = false;
+            btn_extraWires.SetActive(false);
         }
         if (originalScreen == true)
         {
-            btn_originalScreen.active = true;
+            btn_originalScreen.SetActive(true);
         }
         else
         {
-            btn_originalScreen.active = false;
+            btn_originalScreen.SetActive(false);
         }
         if (salvagedScreen == true)
         {
-            btn_salvagedScreen.active = true;
+            btn_salvagedScreen.SetActive(true);
         }
         else
         {
-            btn_salvagedScreen.active = false;
+            btn_salvagedScreen.SetActive(false);
         }
         if (yourCard == true)
         {
-            btn_yourCard.active = true;
+            btn_yourCard.SetActive(true);
         }
         else
         {
-            btn_yourCard.active = false;
-        }
+            btn_yourCard.SetActive(false);
+            }
         if (USB == true)
         {
-            btn_USB.active = true;
+            btn_USB.SetActive(true);
         }
         else
         {
-            btn_USB.active = false;
+            btn_USB.SetActive(false);
         }
+        
     }
 }

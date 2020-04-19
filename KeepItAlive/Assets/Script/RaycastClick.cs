@@ -20,6 +20,7 @@ public class RaycastClick : MonoBehaviour
             {
                 Debug.Log(hit.collider.gameObject.name);
                 ItemHit = hit.collider.gameObject.name;
+                gameObject.BroadcastMessage("CheckHit");
 
             }
         }
