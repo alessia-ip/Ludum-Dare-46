@@ -11,10 +11,17 @@ public class BatteryCollectionScript : MonoBehaviour
     public bool batteryOneBool;
     public bool batteryTwoBool;
 
+
+    public AudioSource aud;
+    public AudioClip collectItem;
+
     void Start()
     {
         _raycastclick = GameObject.Find("GameManager").GetComponent<RaycastClick>();
         _inventory = GameObject.Find("GameManager").GetComponent<Inventory>();
+
+        aud = GameObject.Find("Main Camera").GetComponent<AudioSource>();
+        collectItem = Resources.Load("COLLECTITEM") as AudioClip;
 
     }
    
@@ -29,6 +36,7 @@ public class BatteryCollectionScript : MonoBehaviour
             } else { 
             _inventory.batteryTwo = batteryTwoBool;
             }
+            aud.PlayOneShot(collectItem);
             this.gameObject.SetActive(false);
         }
     }

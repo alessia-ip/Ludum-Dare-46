@@ -17,9 +17,17 @@ public class InventoryAnim : MonoBehaviour
     public Button pullTab;
 
 
+    public AudioSource aud;
+    public AudioClip cover;
+
+
     private void Start()
     {
         inventoryAnim = this.GetComponent<Animator>();
+
+
+        aud = GameObject.Find("Main Camera").GetComponent<AudioSource>();
+        cover = Resources.Load("BATTERYCOVER") as AudioClip;
     }
 
     public void buttonClick()
@@ -32,6 +40,7 @@ public class InventoryAnim : MonoBehaviour
             Debug.Log("To Open");
             inventoryAnim.SetInteger("State", 1);
             inventoryOpen = true;
+            aud.PlayOneShot(cover);
             
         } else
         {
@@ -40,7 +49,8 @@ public class InventoryAnim : MonoBehaviour
             inventoryAnim.SetInteger("State", 2);
             inventoryOpen = false;
             inventoryAnim.Play("InvetoryPanelClose");
-            
+            aud.PlayOneShot(cover);
+
         }
     }
 

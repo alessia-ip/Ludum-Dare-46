@@ -10,10 +10,16 @@ public class PutDown : MonoBehaviour
     public Positioning _positioning;
     public GameObject toBeReset;
 
-    // Start is called before the first frame update
-    void Start()
+
+    public AudioSource aud;
+    public AudioClip putDownAud;
+
+
+    private void Start()
     {
-        
+        aud = GameObject.Find("Main Camera").GetComponent<AudioSource>();
+
+        putDownAud = Resources.Load("PUTDOWN") as AudioClip;
     }
 
     // Update is called once per frame
@@ -25,6 +31,8 @@ public class PutDown : MonoBehaviour
             toBeReset = _selected.selectObj;
             _positioning = toBeReset.GetComponent<Positioning>();
             _positioning.PLACEBACK();
+            aud.PlayOneShot(putDownAud);
+
         }
     }
 }

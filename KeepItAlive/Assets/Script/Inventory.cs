@@ -27,6 +27,11 @@ public class Inventory : MonoBehaviour
     public GameObject btn_USB;
 
 
+    public GameObject OBJBatOne;
+    public GameObject OBJBatTwo;
+    public GameObject crackedScreen;
+    public GameObject goodScreen;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,20 +47,29 @@ public class Inventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (batteryOne == true && batteryTwo == false|| batteryTwo == true && batteryOne == false)
-        { 
-            btn_batteryOne.SetActive(true);
-        } else
-        {
-            btn_batteryOne.SetActive(false);
-        }
         if (batteryTwo == true && batteryOne == true)
         {
             btn_batteryTwo.SetActive(true);
+            OBJBatOne.SetActive(true);
+            OBJBatTwo.SetActive(true);
         }
         else
         {
             btn_batteryTwo.SetActive(false);
+            if (batteryOne == false && batteryTwo == false)
+            {
+                OBJBatOne.SetActive(false);
+                OBJBatTwo.SetActive(false);
+            }
+        }
+        if (batteryOne == true && batteryTwo == false|| batteryTwo == true && batteryOne == false)
+        { 
+            btn_batteryOne.SetActive(true);
+            OBJBatOne.SetActive(true);
+        } else
+        {
+            btn_batteryOne.SetActive(false);
+      
         }
         if (extraWires == true)
         {
@@ -65,22 +79,32 @@ public class Inventory : MonoBehaviour
         {
             btn_extraWires.SetActive(false);
         }
+
+
+        if (salvagedScreen == true)
+        {
+            btn_salvagedScreen.SetActive(true);
+            goodScreen.SetActive(true);
+        }
+        else
+        {
+            btn_salvagedScreen.SetActive(false);
+            goodScreen.SetActive(false);
+        }
+
+
         if (originalScreen == true)
         {
             btn_originalScreen.SetActive(true);
+            crackedScreen.SetActive(true);
         }
         else
         {
             btn_originalScreen.SetActive(false);
         }
-        if (salvagedScreen == true)
-        {
-            btn_salvagedScreen.SetActive(true);
-        }
-        else
-        {
-            btn_salvagedScreen.SetActive(false);
-        }
+
+
+
         if (yourCard == true)
         {
             btn_yourCard.SetActive(true);
@@ -97,6 +121,13 @@ public class Inventory : MonoBehaviour
         {
             btn_USB.SetActive(false);
         }
-        
+
+
+
+
+        /////////
+        ///
+
+
     }
 }

@@ -14,6 +14,9 @@ public class Positioning : MonoBehaviour
     public int speed;
 
 
+    public AudioSource aud;
+    public AudioClip pickupAud;
+
     public Component[] childcolliders;
 
     // Start is called before the first frame update
@@ -31,6 +34,11 @@ public class Positioning : MonoBehaviour
         {
             cColider.enabled = false;
         }
+
+
+        aud = GameObject.Find("Main Camera").GetComponent<AudioSource>();
+
+        pickupAud = Resources.Load("PICKUP") as AudioClip;
 
     }
 
@@ -52,6 +60,7 @@ public class Positioning : MonoBehaviour
                 _selected.selectOneName = this.gameObject.name;
                 _selected.selectObj = this.gameObject;
 
+                aud.PlayOneShot(pickupAud);
 
                 foreach (Collider cColider in childcolliders)
                 {
